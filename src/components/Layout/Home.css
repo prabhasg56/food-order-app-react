@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: #192a56;
+}
+
+.food-card {
+  height: 40%;
+  width: 50%;
+  font-weight: bold;
+  margin-top: 8rem;
+  color: white;
+  background-color: #2f3640;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.food-card h2 {
+  font-weight: bolder;
+}

@@ -2,20 +2,20 @@
     display: flex;
     height: 60px;
     width: 100%;
-    background-color: rgba(231, 67, 3, 0.801);
+    background-color: #c23616;
     align-items: center;
     justify-content: space-evenly;
     color: white;
 }
 
 .header-title {
-    margin-right: 230px;
+    margin-right: 250px;
 }
 
 .cart {
     display: flex;
     margin-left: 200px;
-    background-color: brown;
+    background-color: darkred;
     width: 160px;
     height: 40px;
     align-items: center;
@@ -27,14 +27,14 @@
 .cart-text {
     margin-left: 5px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .cart-amount {
     /* display: flex; */
     margin-left: 5px;
-    background-color: darkred;
-    font-size: 15px;
+    background-color: #c0392b;
+    font-size: 17px;
     width: 25%;
     height: 50%;
     border-radius: 10px;
