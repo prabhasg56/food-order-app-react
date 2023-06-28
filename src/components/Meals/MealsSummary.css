@@ -3,14 +3,18 @@
   width: 100%;
   height: 100%;
   justify-content: center;
-  background-color: #192a56;
+  /* background-color: #2f3640; */
+
 }
 
 .food-card {
   height: 40%;
-  width: 50%;
+  width: 40%;
   font-weight: bold;
-  margin-top: 8rem;
+  margin: auto;
+  margin-top: -10rem;
+  position: relative;
+  padding: 0.8rem;
   color: white;
   background-color: #2f3640;
   text-align: center;

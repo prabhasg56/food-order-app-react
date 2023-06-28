@@ -1,7 +1,7 @@
 import React from 'react';
-import './Home.css'
+import './MealsSummary.css'
 
-const Home = () => {
+const MealsSummary = () => {
   return (
     
     <div className='main'>
@@ -15,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default MealsSummary;

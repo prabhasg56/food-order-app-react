@@ -1,11 +1,11 @@
 import Header from "./components/Layout/Header";
-import Home from "./components/Layout/Home";
+import AvailableMeals from "./components/Meals/AvailableMeals";
 
 function App() {
   return (
     <>
       <Header />
-      <Home/>
+      <AvailableMeals/>
     </>
   );
 }

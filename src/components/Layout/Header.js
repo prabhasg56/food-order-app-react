@@ -1,22 +1,33 @@
 import React from "react";
-import './Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import "./Header.css";
+import mealsImage from '../../assets/meals.jpg'
+import MealsSummary from "../Meals/MealsSummary";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <>
-      <div className="header">
+      <header className="header">
         <div className="header-title">
           <h2>React Meals</h2>
         </div>
 
-        <div className="cart">
-        <FontAwesomeIcon icon={faCartShopping} />
-            <span className="cart-text">Yore Cart </span>
-            <div className="cart-amount">{0}</div>
-        </div>
+        <button className="cart" onClick={()=>console.log('hello')}>
+          <span>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </span>
+          <span className="cart-text">
+            Yore Cart
+          </span>
+          <span className="cart-amount">{10}</span>
+        </button>
+      </header>
+      
+      <div className="main-image">
+          <img  src={mealsImage} alt='A table full of delicious food!'/>
       </div>
+      <MealsSummary/>
     </>
   );
 };

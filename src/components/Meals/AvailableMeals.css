@@ -1,0 +1,21 @@
+.meals-list {
+    display: flex;
+    width: 50%;
+    height: auto;
+    background-color: rgb(145, 142, 142);
+    margin-top: 3rem;
+    border-radius: 10px;
+    position: relative;
+    align-content: center;
+    margin-left: 25%;
+
+}
+
+.meal {
+    margin-left: 1.5rem;
+
+}
+
+.meal h4 {
+    color: rgb(209, 21, 21);
+}
