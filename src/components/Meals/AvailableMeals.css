@@ -1,5 +1,6 @@
 .meals-list {
     display: flex;
+    flex-direction: column;
     width: 50%;
     height: auto;
     background-color: rgb(145, 142, 142);
@@ -12,10 +13,62 @@
 }
 
 .meal {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+}
+
+.meal-card {
+    display: flex; 
+    justify-content: space-between;
+    background-color: rgb(122, 109, 109);
+    width: 97.5%;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    margin-top: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.meal-card h3 {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.meal-card h4 {
+    color: rgb(209, 21, 21);
+    margin-top: -5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.meal-card p {
+    font-size: small;
+    margin-top: -12px;
+    font-family:'italic';
+    margin-left: 10px;
+}
+
+.meal-form {
+    /* display: flex; */
+    /* align-items: right; */
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
 
 }
 
-.meal h4 {
-    color: rgb(209, 21, 21);
+.meal-form input {
+    width: 22px;
+    border-radius: 5px;
+   text-align: center;
+   margin-left: 4px;
+}
+
+.btn {
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color: #4d1601;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 3.5rem;
+    height: 1.5rem;
 }
