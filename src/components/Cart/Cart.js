@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import MyModal from "./Modal";
 
-const Cart = () => {
-  const [open, setOpen] = useState(true);
-
-  const openModal = (show) => {
-    setOpen(show);
-  };
-
+const Cart = (props) => {
   return (
     <>
       {/* <button onClick={() => openModal(true)}> Open </button> */}
-      {open && <MyModal openModal={openModal} />}
+      {props.open && <MyModal openModal={props.setCart}/>}
     </>
   );
 };

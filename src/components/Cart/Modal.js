@@ -5,7 +5,7 @@ import "./Cart.css";
 const MyModal = ({openModal}) => {
 
     useEffect(() => {
-      //background not scrolling
+      //stop background scrolling
       document.body.style.overflowY = "hidden";
 
       //background scrolling

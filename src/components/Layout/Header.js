@@ -4,9 +4,8 @@ import mealsImage from '../../assets/meals.jpg'
 import MealsSummary from "../Meals/MealsSummary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import Cart from "../Cart/Cart";
 
-const Header = () => {
+const Header = ({openModal}) => {
   return (
     <>
       <header className="header">
@@ -14,7 +13,7 @@ const Header = () => {
           <h2>React Meals</h2>
         </div>
 
-        <button className="cart" onClick={()=><Cart/>}>
+        <button className="cart" onClick={()=>openModal(true)}>
           <span>
             <FontAwesomeIcon icon={faCartShopping} />
           </span>
