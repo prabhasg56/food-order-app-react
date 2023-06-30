@@ -1,0 +1,48 @@
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(218, 218, 218, 0.534);
+}
+
+.modal{
+    display: flex;
+    position: fixed;
+    width: 36%;
+    height: auto;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background-color: white;
+    border-radius: 10px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title h3 {
+    margin-top: 0.8rem;
+}
+
+.cart-value h3 {
+    margin-top: 2rem;
+    margin-left: 7rem;
+}
+
+.btn-close{
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #4d1601;
+}
+
+.btn-order{
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #4d1601;
+    color: white;
+}
