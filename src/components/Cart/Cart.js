@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MyModal from "./Modal";
 
 const Cart = (props) => {
