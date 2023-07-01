@@ -9,6 +9,7 @@
 
 .modal{
     display: flex;
+    flex-direction: column;
     position: fixed;
     width: 36%;
     height: auto;
@@ -21,17 +22,47 @@
     transform: translate(-50%, -50%);
 }
 
-.modal-title h3 {
-    margin-top: 0.8rem;
+.meals {
+    padding-bottom: 1rem;
+    border-bottom: #4d1601 solid  ;
 }
 
-.cart-value h3 {
-    margin-top: 2rem;
-    margin-left: 7rem;
+.meal-price {
+    margin-top: 0.86rem;
+    justify-content: space-evenly;
+}
+
+.meal-quantity {
+    margin-left: 3rem;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 2px;
+    font-weight: 500;
+    padding: 1.5px;
+    font-size: 15px;
+}
+
+.remove-btn {
+    width: 26px;
+    margin-left: 20rem;
+    border-radius: 5px;
+    color: #4d1601;
+}
+
+.add-btn {
+    margin-left: 0.89rem;
+    background-color: #4d1601;
+    color: white;
+    border-radius: 5px;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-close{
-    margin-left: 1rem;
+    margin-left: 22rem;
     font-size: 15px;
     font-weight: bold;
     border-radius: 10px;
