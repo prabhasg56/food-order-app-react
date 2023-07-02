@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./AvailableMeals.css";
 import CartContext from "../stroe/cart-context";
 
@@ -7,48 +7,67 @@ const meals = [
     id: "m1",
     mealTitle: "Sushi",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$23.5",
   },
   {
     id: "m2",
-    mealTitle: "Buger",
+    mealTitle: "Buger A",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$13",
   },
   {
     id: "m3",
-    mealTitle: "Buger",
+    mealTitle: "Buger B",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$13",
   },
   {
     id: "m4",
-    mealTitle: "Buger",
+    mealTitle: "Buger C",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$30",
   },
   {
     id: "m5",
-    mealTitle: "Sushi",
+    mealTitle: "Sushi B",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$10",
   },
   {
     id: "m6",
-    mealTitle: "Sushi",
+    mealTitle: "Sushi A",
     mealDesc: "A german specialty",
-    mealPrice: "$123",
+    mealPrice: "$43",
   },
 ];
 
 const AvailableMeals = () => {
   const cartCtx = useContext(CartContext);
+  const [cartData, setCartData] = useState([]);
 
-  const addItemToCart = (meal) => {
-    const quantity = document.getElementById('amount_'+meal.id).value;
+  const addItemToCart = (meal, id) => {
+    const quantity = Number(document.getElementById("amount_" + meal.id).value);
 
-    cartCtx._currentValue.addItem({...meal, quantity});
+    let status = false;
+    let newData = [...cartData];
+
+    newData.forEach((value) => {
+      if (value.id === id) {
+        status = true;
+        value.quantity = value.quantity+quantity;
+      }
+    });
+    
+    if (status) {
+      setCartData(newData);
+    } else
+      setCartData((prev) => {
+        return [...prev, { ...meal, quantity }];
+      });
   };
+useEffect(()=>{
+  cartCtx._currentValue.addItem(cartData);
+},[cartData])
 
   return (
     <div className="meals-list">
@@ -63,9 +82,12 @@ const AvailableMeals = () => {
               </div>
               <div className="meal-form">
                 <label>Amount</label>
-                <input id={'amount_'+meal.id} defaultValue={1} />
+                <input id={"amount_" + meal.id} defaultValue={1} />
                 <div>
-                  <button className="btn" onClick={() => addItemToCart(meal)}>
+                  <button
+                    className="btn"
+                    onClick={() => addItemToCart(meal, meal.id)}
+                  >
                     +Add
                   </button>
                 </div>

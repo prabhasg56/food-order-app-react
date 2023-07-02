@@ -10,8 +10,8 @@
 .modal{
     display: flex;
     flex-direction: column;
-    position: fixed;
-    width: 36%;
+    position: absolute;
+    width: 38%;
     height: auto;
     justify-content: space-between;
     padding: 0.8rem;
@@ -24,7 +24,8 @@
 
 .meals {
     padding-bottom: 1rem;
-    border-bottom: #4d1601 solid  ;
+    border-bottom: #4d1601 solid;
+
 }
 
 .meal-price {
@@ -43,6 +44,7 @@
 }
 
 .remove-btn {
+    position: relative;
     width: 26px;
     margin-left: 20rem;
     border-radius: 5px;
@@ -50,6 +52,7 @@
 }
 
 .add-btn {
+    position: absolute;
     margin-left: 0.89rem;
     background-color: #4d1601;
     color: white;
@@ -60,6 +63,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* .modal-btn {
+    position: relative;
+} */
 
 .btn-close{
     margin-left: 22rem;
